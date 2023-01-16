@@ -16,10 +16,10 @@ type ParsedArgs = {
 const parseArgs = (): ParsedArgs => {
   const parsedArgs = parse(Deno.args);
   return {
-    structure_file: parsedArgs["f"] || "md-run.gro",
-    peg_z_coord_file: parsedArgs["z"] || "peg_z.xvg",
-    peg_rg_file: parsedArgs["r"] || "rg_peg.xvg",
-    is_cyclic: parsedArgs["c"] || false,
+    structure_file: parsedArgs.f || "md-run.gro",
+    peg_z_coord_file: parsedArgs.z || "peg_z.xvg",
+    peg_rg_file: parsedArgs.r || "rg_peg.xvg",
+    is_cyclic: parsedArgs.c || false,
   };
 };
 
